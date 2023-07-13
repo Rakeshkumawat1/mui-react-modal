@@ -1,7 +1,7 @@
 {
   "name": "mui-react-modal",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
   "description": "Create responsive modal and dialog in react using mui.",
   "author": "Rakesh kumawat",
   "license": "MIT License",
@@ -41,5 +41,8 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
