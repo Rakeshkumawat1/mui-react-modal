@@ -2,6 +2,9 @@
   "name": "mui-react-modal",
   "version": "0.1.0",
   "private": true,
+  "description": "Create responsive modal and dialog in react using mui.",
+  "author": "Rakesh kumawat",
+  "license": "MIT License",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
