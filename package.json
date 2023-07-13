@@ -44,6 +44,6 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "git@github.com:Rakeshkumawat1/mui-react-modal.git"
   }
 }
