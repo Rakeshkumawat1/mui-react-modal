@@ -3,6 +3,7 @@
   "presets": [
     [
       "@babel/preset-env",
+      // { "modules": false },
       {
         "targets": {
           "chrome": 100
@@ -11,5 +12,23 @@
     ],
     "@babel/preset-react"
   ],
-  "plugins": []
+  "plugins": [
+    /* [
+      "babel-plugin-transform-imports",
+      {
+        "@mui/material": {
+          "transform": "@mui/material/${member}",
+          "preventFullImport": true
+        },
+        "@mui/styled-engine-sc": {
+          "transform": "@mui/styled-engine-sc/${member}",
+          "preventFullImport": true
+        },
+        "@mui/icons-material": {
+          "transform": "@mui/icons-material/${member}",
+          "preventFullImport": true
+        }
+      }
+    ] */
+  ]
 }
