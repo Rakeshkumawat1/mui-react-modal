@@ -4145,7 +4145,7 @@ const internal_processStyles = (tag, processor) => {
   }
 };
 
-const _excluded$i = ["values", "unit", "step"];
+const _excluded$j = ["values", "unit", "step"];
 const sortBreakpointsValues = values => {
   const breakpointsAsArray = Object.keys(values).map(key => ({
     key,
@@ -4180,7 +4180,7 @@ function createBreakpoints(breakpoints) {
       unit = 'px',
       step = 5
     } = breakpoints,
-    other = _objectWithoutPropertiesLoose(breakpoints, _excluded$i);
+    other = _objectWithoutPropertiesLoose(breakpoints, _excluded$j);
   const sortedValues = sortBreakpointsValues(values);
   const keys = Object.keys(sortedValues);
   function up(key) {
@@ -5209,7 +5209,7 @@ const styleFunctionSx = unstable_createStyleFunctionSx();
 styleFunctionSx.filterProps = ['sx'];
 var styleFunctionSx$1 = styleFunctionSx;
 
-const _excluded$h = ["breakpoints", "palette", "spacing", "shape"];
+const _excluded$i = ["breakpoints", "palette", "spacing", "shape"];
 function createTheme$1(options = {}, ...args) {
   const {
       breakpoints: breakpointsInput = {},
@@ -5217,7 +5217,7 @@ function createTheme$1(options = {}, ...args) {
       spacing: spacingInput,
       shape: shapeInput = {}
     } = options,
-    other = _objectWithoutPropertiesLoose(options, _excluded$h);
+    other = _objectWithoutPropertiesLoose(options, _excluded$i);
   const breakpoints = createBreakpoints(breakpointsInput);
   const spacing = createSpacing(spacingInput);
   let muiTheme = deepmerge({
@@ -5255,7 +5255,7 @@ function useTheme$1(defaultTheme = systemDefaultTheme$1) {
   return useTheme$2(defaultTheme);
 }
 
-const _excluded$g = ["sx"];
+const _excluded$h = ["sx"];
 const splitProps = props => {
   var _props$theme$unstable, _props$theme;
   const result = {
@@ -5276,7 +5276,7 @@ function extendSxProp(props) {
   const {
       sx: inSx
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$g);
+    other = _objectWithoutPropertiesLoose(props, _excluded$h);
   const {
     systemProps,
     otherProps
@@ -5302,7 +5302,7 @@ function extendSxProp(props) {
 
 function r(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e))for(t=0;t<e.length;t++)e[t]&&(f=r(e[t]))&&(n&&(n+=" "),n+=f);else for(t in e)e[t]&&(n&&(n+=" "),n+=t);return n}function clsx(){for(var e,t,f=0,n="";f<arguments.length;)(e=arguments[f++])&&(t=r(e))&&(n&&(n+=" "),n+=t);return n}
 
-const _excluded$f = ["className", "component"];
+const _excluded$g = ["className", "component"];
 function createBox(options = {}) {
   const {
     themeId,
@@ -5320,7 +5320,7 @@ function createBox(options = {}) {
         className,
         component = 'div'
       } = _extendSxProp,
-      other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$f);
+      other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$g);
     return /*#__PURE__*/require$$2.jsx(BoxRoot, _extends({
       as: component,
       ref: ref,
@@ -5331,7 +5331,7 @@ function createBox(options = {}) {
   return Box;
 }
 
-const _excluded$e = ["variant"];
+const _excluded$f = ["variant"];
 function isEmpty$1(string) {
   return string.length === 0;
 }
@@ -5345,7 +5345,7 @@ function propsToClassKey(props) {
   const {
       variant
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$e);
+    other = _objectWithoutPropertiesLoose(props, _excluded$f);
   let classKey = variant || '';
   Object.keys(other).sort().forEach(key => {
     if (key === 'color') {
@@ -5357,7 +5357,7 @@ function propsToClassKey(props) {
   return classKey;
 }
 
-const _excluded$d = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"];
+const _excluded$e = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"];
 function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -5452,7 +5452,7 @@ function createStyled(input = {}) {
         skipSx: inputSkipSx,
         overridesResolver
       } = inputOptions,
-      options = _objectWithoutPropertiesLoose(inputOptions, _excluded$d);
+      options = _objectWithoutPropertiesLoose(inputOptions, _excluded$e);
 
     // if skipVariantsResolver option is defined, take the value, otherwise, true for root and false for other slots.
     const skipVariantsResolver = inputSkipVariantsResolver !== undefined ? inputSkipVariantsResolver : componentSlot && componentSlot !== 'Root' || false;
@@ -5845,7 +5845,7 @@ function createMixins(breakpoints, mixins) {
   }, mixins);
 }
 
-const _excluded$c = ["mode", "contrastThreshold", "tonalOffset"];
+const _excluded$d = ["mode", "contrastThreshold", "tonalOffset"];
 const light = {
   // The colors used to style the text.
   text: {
@@ -6014,7 +6014,7 @@ function createPalette(palette) {
       contrastThreshold = 3,
       tonalOffset = 0.2
     } = palette,
-    other = _objectWithoutPropertiesLoose(palette, _excluded$c);
+    other = _objectWithoutPropertiesLoose(palette, _excluded$d);
   const primary = palette.primary || getDefaultPrimary(mode);
   const secondary = palette.secondary || getDefaultSecondary(mode);
   const error = palette.error || getDefaultError(mode);
@@ -6138,7 +6138,7 @@ const theme2 = createTheme({ palette: {
   return paletteOutput;
 }
 
-const _excluded$b = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
+const _excluded$c = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
 function round(value) {
   return Math.round(value * 1e5) / 1e5;
 }
@@ -6169,7 +6169,7 @@ function createTypography(palette, typography) {
       allVariants,
       pxToRem: pxToRem2
     } = _ref,
-    other = _objectWithoutPropertiesLoose(_ref, _excluded$b);
+    other = _objectWithoutPropertiesLoose(_ref, _excluded$c);
   if (process.env.NODE_ENV !== 'production') {
     if (typeof fontSize !== 'number') {
       console.error('MUI: `fontSize` is required to be a number.');
@@ -6236,7 +6236,7 @@ function createShadow(...px) {
 const shadows = ['none', createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
 var shadows$1 = shadows;
 
-const _excluded$a = ["duration", "easing", "delay"];
+const _excluded$b = ["duration", "easing", "delay"];
 // Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
 // to learn the context in which each easing should be used.
 const easing = {
@@ -6287,7 +6287,7 @@ function createTransitions(inputTransitions) {
         easing: easingOption = mergedEasing.easeInOut,
         delay = 0
       } = options,
-      other = _objectWithoutPropertiesLoose(options, _excluded$a);
+      other = _objectWithoutPropertiesLoose(options, _excluded$b);
     if (process.env.NODE_ENV !== 'production') {
       const isString = value => typeof value === 'string';
       // IE11 support, replace with Number.isNaN
@@ -6337,7 +6337,7 @@ const zIndex = {
 };
 var zIndex$1 = zIndex;
 
-const _excluded$9 = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
+const _excluded$a = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
 function createTheme(options = {}, ...args) {
   const {
       mixins: mixinsInput = {},
@@ -6345,7 +6345,7 @@ function createTheme(options = {}, ...args) {
       transitions: transitionsInput = {},
       typography: typographyInput = {}
     } = options,
-    other = _objectWithoutPropertiesLoose(options, _excluded$9);
+    other = _objectWithoutPropertiesLoose(options, _excluded$a);
   if (options.vars) {
     throw new Error(process.env.NODE_ENV !== "production" ? `MUI: \`vars\` is a private field used for CSS variables support.
 Please use another name.` : formatMuiErrorMessage(18));
@@ -6601,7 +6601,7 @@ function mergeSlotProps(parameters) {
   };
 }
 
-const _excluded$8 = ["elementType", "externalSlotProps", "ownerState", "skipResolvingSlotProps"];
+const _excluded$9 = ["elementType", "externalSlotProps", "ownerState", "skipResolvingSlotProps"];
 /**
  * @ignore - do not document.
  * Builds the props to be passed into the slot of an unstyled component.
@@ -6618,7 +6618,7 @@ function useSlotProps(parameters) {
       ownerState,
       skipResolvingSlotProps = false
     } = parameters,
-    rest = _objectWithoutPropertiesLoose(parameters, _excluded$8);
+    rest = _objectWithoutPropertiesLoose(parameters, _excluded$9);
   const resolvedComponentsProps = skipResolvingSlotProps ? {} : resolveComponentProps(externalSlotProps, ownerState);
   const {
     props: mergedProps,
@@ -7255,8 +7255,8 @@ function getModalUtilityClass(slot) {
 }
 generateUtilityClasses('MuiModal', ['root', 'hidden', 'backdrop']);
 
-const _excluded$7 = ["children", "closeAfterTransition", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited", "slotProps", "slots"];
-const useUtilityClasses$4 = ownerState => {
+const _excluded$8 = ["children", "closeAfterTransition", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited", "slotProps", "slots"];
+const useUtilityClasses$5 = ownerState => {
   const {
     open,
     exited
@@ -7324,7 +7324,7 @@ const Modal$2 = /*#__PURE__*/React__namespace.forwardRef(function Modal(props, f
       slotProps = {},
       slots = {}
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$7);
+    other = _objectWithoutPropertiesLoose(props, _excluded$8);
   // TODO: `modal`` must change its type in this file to match the type of methods
   // provided by `ModalManager`
   const manager = managerProp;
@@ -7399,7 +7399,7 @@ const Modal$2 = /*#__PURE__*/React__namespace.forwardRef(function Modal(props, f
     hideBackdrop,
     keepMounted
   });
-  const classes = useUtilityClasses$4(ownerState);
+  const classes = useUtilityClasses$5(ownerState);
   const handleEnter = () => {
     setExited(false);
     if (onTransitionEnter) {
@@ -7627,8 +7627,8 @@ function getSvgIconUtilityClass(slot) {
 }
 generateUtilityClasses('MuiSvgIcon', ['root', 'colorPrimary', 'colorSecondary', 'colorAction', 'colorError', 'colorDisabled', 'fontSizeInherit', 'fontSizeSmall', 'fontSizeMedium', 'fontSizeLarge']);
 
-const _excluded$6 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
-const useUtilityClasses$3 = ownerState => {
+const _excluded$7 = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+const useUtilityClasses$4 = ownerState => {
   const {
     color,
     fontSize,
@@ -7695,7 +7695,7 @@ const SvgIcon = /*#__PURE__*/React__namespace.forwardRef(function SvgIcon(inProp
       titleAccess,
       viewBox = '0 0 24 24'
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$6);
+    other = _objectWithoutPropertiesLoose(props, _excluded$7);
   const hasSvgAsChild = /*#__PURE__*/React__namespace.isValidElement(children) && children.type === 'svg';
   const ownerState = _extends({}, props, {
     color,
@@ -7710,7 +7710,7 @@ const SvgIcon = /*#__PURE__*/React__namespace.forwardRef(function SvgIcon(inProp
   if (!inheritViewBox) {
     more.viewBox = viewBox;
   }
-  const classes = useUtilityClasses$3(ownerState);
+  const classes = useUtilityClasses$4(ownerState);
   return /*#__PURE__*/require$$2.jsxs(SvgIconRoot, _extends({
     as: component,
     className: clsx(classes.root, className),
@@ -8936,7 +8936,7 @@ process.env.NODE_ENV !== "production" ? Ripple.propTypes = {
 const touchRippleClasses = generateUtilityClasses('MuiTouchRipple', ['root', 'ripple', 'rippleVisible', 'ripplePulsate', 'child', 'childLeaving', 'childPulsate']);
 var touchRippleClasses$1 = touchRippleClasses;
 
-const _excluded$5 = ["center", "classes", "className"];
+const _excluded$6 = ["center", "classes", "className"];
 let _ = t => t,
   _t,
   _t2,
@@ -9065,7 +9065,7 @@ const TouchRipple = /*#__PURE__*/React__namespace.forwardRef(function TouchRippl
       classes = {},
       className
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$5);
+    other = _objectWithoutPropertiesLoose(props, _excluded$6);
   const [ripples, setRipples] = React__namespace.useState([]);
   const nextKey = React__namespace.useRef(0);
   const rippleCallback = React__namespace.useRef(null);
@@ -9268,8 +9268,8 @@ function getButtonBaseUtilityClass(slot) {
 const buttonBaseClasses = generateUtilityClasses('MuiButtonBase', ['root', 'disabled', 'focusVisible']);
 var buttonBaseClasses$1 = buttonBaseClasses;
 
-const _excluded$4 = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
-const useUtilityClasses$2 = ownerState => {
+const _excluded$5 = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
+const useUtilityClasses$3 = ownerState => {
   const {
     disabled,
     focusVisible,
@@ -9370,7 +9370,7 @@ const ButtonBase = /*#__PURE__*/React__namespace.forwardRef(function ButtonBase(
       touchRippleRef,
       type
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$4);
+    other = _objectWithoutPropertiesLoose(props, _excluded$5);
   const buttonRef = React__namespace.useRef(null);
   const rippleRef = React__namespace.useRef(null);
   const handleRippleRef = useForkRef(rippleRef, touchRippleRef);
@@ -9537,7 +9537,7 @@ const ButtonBase = /*#__PURE__*/React__namespace.forwardRef(function ButtonBase(
     tabIndex,
     focusVisible
   });
-  const classes = useUtilityClasses$2(ownerState);
+  const classes = useUtilityClasses$3(ownerState);
   return /*#__PURE__*/require$$2.jsxs(ButtonBaseRoot, _extends({
     as: ComponentProp,
     className: clsx(classes.root, className),
@@ -9734,8 +9734,8 @@ function getIconButtonUtilityClass(slot) {
 const iconButtonClasses = generateUtilityClasses('MuiIconButton', ['root', 'disabled', 'colorInherit', 'colorPrimary', 'colorSecondary', 'colorError', 'colorInfo', 'colorSuccess', 'colorWarning', 'edgeStart', 'edgeEnd', 'sizeSmall', 'sizeMedium', 'sizeLarge']);
 var iconButtonClasses$1 = iconButtonClasses;
 
-const _excluded$3 = ["edge", "children", "className", "color", "disabled", "disableFocusRipple", "size"];
-const useUtilityClasses$1 = ownerState => {
+const _excluded$4 = ["edge", "children", "className", "color", "disabled", "disableFocusRipple", "size"];
+const useUtilityClasses$2 = ownerState => {
   const {
     classes,
     disabled,
@@ -9835,7 +9835,7 @@ const IconButton = /*#__PURE__*/React__namespace.forwardRef(function IconButton(
       disableFocusRipple = false,
       size = 'medium'
     } = props,
-    other = _objectWithoutPropertiesLoose(props, _excluded$3);
+    other = _objectWithoutPropertiesLoose(props, _excluded$4);
   const ownerState = _extends({}, props, {
     edge,
     color,
@@ -9843,7 +9843,7 @@ const IconButton = /*#__PURE__*/React__namespace.forwardRef(function IconButton(
     disableFocusRipple,
     size
   });
-  const classes = useUtilityClasses$1(ownerState);
+  const classes = useUtilityClasses$2(ownerState);
   return /*#__PURE__*/require$$2.jsx(IconButtonRoot, _extends({
     className: clsx(classes.root, className),
     centerRipple: true,
@@ -9923,6 +9923,193 @@ process.env.NODE_ENV !== "production" ? IconButton.propTypes /* remove-proptypes
   sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object])
 } : void 0;
 var IconButton$1 = IconButton;
+
+function getTypographyUtilityClass(slot) {
+  return generateUtilityClass('MuiTypography', slot);
+}
+generateUtilityClasses('MuiTypography', ['root', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'inherit', 'button', 'caption', 'overline', 'alignLeft', 'alignRight', 'alignCenter', 'alignJustify', 'noWrap', 'gutterBottom', 'paragraph']);
+
+const _excluded$3 = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
+const useUtilityClasses$1 = ownerState => {
+  const {
+    align,
+    gutterBottom,
+    noWrap,
+    paragraph,
+    variant,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root', variant, ownerState.align !== 'inherit' && `align${capitalize(align)}`, gutterBottom && 'gutterBottom', noWrap && 'noWrap', paragraph && 'paragraph']
+  };
+  return composeClasses(slots, getTypographyUtilityClass, classes);
+};
+const TypographyRoot = styled$1('span', {
+  name: 'MuiTypography',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.variant && styles[ownerState.variant], ownerState.align !== 'inherit' && styles[`align${capitalize(ownerState.align)}`], ownerState.noWrap && styles.noWrap, ownerState.gutterBottom && styles.gutterBottom, ownerState.paragraph && styles.paragraph];
+  }
+})(({
+  theme,
+  ownerState
+}) => _extends({
+  margin: 0
+}, ownerState.variant && theme.typography[ownerState.variant], ownerState.align !== 'inherit' && {
+  textAlign: ownerState.align
+}, ownerState.noWrap && {
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap'
+}, ownerState.gutterBottom && {
+  marginBottom: '0.35em'
+}, ownerState.paragraph && {
+  marginBottom: 16
+}));
+const defaultVariantMapping = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subtitle1: 'h6',
+  subtitle2: 'h6',
+  body1: 'p',
+  body2: 'p',
+  inherit: 'p'
+};
+
+// TODO v6: deprecate these color values in v5.x and remove the transformation in v6
+const colorTransformations = {
+  primary: 'primary.main',
+  textPrimary: 'text.primary',
+  secondary: 'secondary.main',
+  textSecondary: 'text.secondary',
+  error: 'error.main'
+};
+const transformDeprecatedColors = color => {
+  return colorTransformations[color] || color;
+};
+const Typography = /*#__PURE__*/React__namespace.forwardRef(function Typography(inProps, ref) {
+  const themeProps = useThemeProps({
+    props: inProps,
+    name: 'MuiTypography'
+  });
+  const color = transformDeprecatedColors(themeProps.color);
+  const props = extendSxProp(_extends({}, themeProps, {
+    color
+  }));
+  const {
+      align = 'inherit',
+      className,
+      component,
+      gutterBottom = false,
+      noWrap = false,
+      paragraph = false,
+      variant = 'body1',
+      variantMapping = defaultVariantMapping
+    } = props,
+    other = _objectWithoutPropertiesLoose(props, _excluded$3);
+  const ownerState = _extends({}, props, {
+    align,
+    color,
+    className,
+    component,
+    gutterBottom,
+    noWrap,
+    paragraph,
+    variant,
+    variantMapping
+  });
+  const Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
+  const classes = useUtilityClasses$1(ownerState);
+  return /*#__PURE__*/require$$2.jsx(TypographyRoot, _extends({
+    as: Component,
+    ref: ref,
+    ownerState: ownerState,
+    className: clsx(classes.root, className)
+  }, other));
+});
+process.env.NODE_ENV !== "production" ? Typography.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Set the text-align on the component.
+   * @default 'inherit'
+   */
+  align: PropTypes.oneOf(['center', 'inherit', 'justify', 'left', 'right']),
+  /**
+   * The content of the component.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+  /**
+   * If `true`, the text will have a bottom margin.
+   * @default false
+   */
+  gutterBottom: PropTypes.bool,
+  /**
+   * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
+   *
+   * Note that text overflow can only happen with block or inline-block level elements
+   * (the element needs to have a width in order to overflow).
+   * @default false
+   */
+  noWrap: PropTypes.bool,
+  /**
+   * If `true`, the element will be a paragraph element.
+   * @default false
+   */
+  paragraph: PropTypes.bool,
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool])), PropTypes.func, PropTypes.object]),
+  /**
+   * Applies the theme typography styles.
+   * @default 'body1'
+   */
+  variant: PropTypes /* @typescript-to-proptypes-ignore */.oneOfType([PropTypes.oneOf(['body1', 'body2', 'button', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'inherit', 'overline', 'subtitle1', 'subtitle2']), PropTypes.string]),
+  /**
+   * The component maps the variant prop to a range of different HTML element types.
+   * For instance, subtitle1 to `<h6>`.
+   * If you wish to change that mapping, you can provide your own.
+   * Alternatively, you can use the `component` prop.
+   * @default {
+   *   h1: 'h1',
+   *   h2: 'h2',
+   *   h3: 'h3',
+   *   h4: 'h4',
+   *   h5: 'h5',
+   *   h6: 'h6',
+   *   subtitle1: 'h6',
+   *   subtitle2: 'h6',
+   *   body1: 'p',
+   *   body2: 'p',
+   *   inherit: 'p',
+   * }
+   */
+  variantMapping: PropTypes /* @typescript-to-proptypes-ignore */.object
+} : void 0;
+var Typography$1 = Typography;
 
 const _excluded$2 = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
 const styles = {
@@ -10692,14 +10879,21 @@ function CustomModal(props) {
     title,
     description,
     action,
-    closeIcon = true
+    closeIcon = true,
+    customStyle = {},
+    actionPosition = "left",
+    modalRootClass = "",
+    closeIconRootClass = "",
+    titleRootClass = "",
+    descriptionRootClass = "",
+    actionRootClass = ""
   } = props;
   const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    minWidth: 300,
     bgcolor: 'background.paper',
     // border: '2px solid #000',
     boxShadow: 24,
@@ -10711,18 +10905,25 @@ function CustomModal(props) {
       outline: 'none'
     }
   };
+
+  // Create action position mapper to avoid multiple if else in jsx.
+  const actionPositionMapper = {
+    left: "flex-start",
+    center: 'center',
+    right: 'flex-end'
+  };
   return /*#__PURE__*/React__namespace.createElement(Modal$1, {
     open: open,
     onClose: close,
     "aria-labelledby": "parent-modal-title",
     "aria-describedby": "parent-modal-description"
   }, /*#__PURE__*/React__namespace.createElement(Box$1, {
-    sx: {
-      ...style
-    }
+    className: modalRootClass,
+    sx: Object.keys(customStyle).length ? customStyle : style
   }, closeIcon && /*#__PURE__*/React__namespace.createElement(IconButton$1, {
-    id: "modal-modal-title",
+    id: "modal-close-icon",
     onClick: close,
+    className: closeIconRootClass,
     sx: {
       display: 'flex',
       position: 'absolute',
@@ -10731,11 +10932,36 @@ function CustomModal(props) {
       right: 15,
       top: 10
     }
-  }, /*#__PURE__*/React__namespace.createElement(default_1, null)), /*#__PURE__*/React__namespace.createElement("h2", {
-    id: "parent-modal-title"
-  }, title), /*#__PURE__*/React__namespace.createElement("p", {
-    id: "parent-modal-description"
-  }, description), /*#__PURE__*/React__namespace.createElement(Box$1, null, action)));
+  }, /*#__PURE__*/React__namespace.createElement(default_1, null)), typeof title === "string" ? /*#__PURE__*/React__namespace.createElement(Typography$1, {
+    id: "parent-modal-title",
+    variant: "h5",
+    component: "h5",
+    className: titleRootClass,
+    sx: {
+      fontWeight: 600,
+      lineHeight: '40px'
+    }
+  }, title) : {
+    title
+  }, typeof description === "string" ? /*#__PURE__*/React__namespace.createElement(Typography$1, {
+    id: "parent-modal-description",
+    variant: "p",
+    component: "p",
+    className: descriptionRootClass,
+    sx: {
+      lineHeight: '45px'
+    }
+  }, description) : {
+    description
+  }, action && /*#__PURE__*/React__namespace.createElement(Box$1, {
+    className: actionRootClass,
+    sx: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: actionPositionMapper[actionPosition],
+      width: '100%'
+    }
+  }, action)));
 }
 CustomModal.propTypes = {
   open: PropTypes.bool.isRequired,
@@ -10743,7 +10969,14 @@ CustomModal.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   action: PropTypes.element,
-  closeIcon: PropTypes.bool
+  closeIcon: PropTypes.bool,
+  customStyle: PropTypes.object,
+  actionPosition: PropTypes.oneOf(["left", "center", "right"]),
+  modalRootClass: PropTypes.string,
+  closeIconRootClass: PropTypes.string,
+  titleRootClass: PropTypes.string,
+  descriptionRootClass: PropTypes.string,
+  actionRootClass: PropTypes.string
 };
 
 exports.Modal = CustomModal;
