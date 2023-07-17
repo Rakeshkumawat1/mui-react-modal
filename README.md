@@ -42,8 +42,8 @@ export default function Test() {
 | :---         | :---           | :---          | :---         | :---                                    |
 | `open`       | `Boolean`     | `false`    |       `true`   | For open and close modal.  |
 | `close`       | `Function`     | `null`   |     `false`  | For close modal.   |
-| `title`       | `String || Element`     | `null`    |    `false`    |  Show modal title.     |
-| `description` | `String || Element`     | `null`    |     `false`   |  Show modal description.  |
+| `title`       | `String \|\| Element`     | `null`    |    `false`    |  Show modal title.     |
+| `description` | `String \|\| Element`     | `null`    |     `false`   |  Show modal description.  |
 | `action`       | `Element`     | `null`    |     `false`   |   For modal buttom action buttons.       |
 | `closeIcon`       | `Boolean`     | `true`    |     `false`   |    Show or hide modal close icon based on condition.  |
 | `customStyle`       | `Object`     | `Object`    |    `false`   |  Use style object to modify modal default style.  |
