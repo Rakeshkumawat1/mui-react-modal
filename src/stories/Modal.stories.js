@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { Modal } from "../index";
 
 export default {
@@ -11,10 +12,11 @@ export default {
 export const ModalTest = {
   args: {
     open: true,
-    title: 'Title',
-    description: "Description",
+    title: 'Modal Title',
+    description: "Modal Description",
     close: () => false,
-    action: <>TestAction</>,
-    closeIcon: true
-  } 
+    action: <Button variant="outlined" size={"small"}>Save</Button>,
+    closeIcon: true,
+    actionPosition: "right"
+  }
 };
