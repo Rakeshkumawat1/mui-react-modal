@@ -9,7 +9,17 @@
   "module": "dist/index.es.js",
   "keywords": [
     "React-modal",
-    "dialog",
+    "Modal",
+    "mui-modal",
+    "mui-dialog",
+    "Dialog",
+    "React",
+    "Responsive",
+    "Responsive-modal",
+    "Responsive-dialog",
+    "Customizable",
+    "Customizable-modal",
+    "Customizable-dialog",
     "custom-modal"
   ],
   "scripts": {
