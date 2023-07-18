@@ -1,13 +1,13 @@
 # mui-react-modal
 Creating a Custom Modal and Dialog Component with MUI (Material-UI) in React for Enhanced User Experience.
 
-# install
+# Install
 ```
 npm i mui-react-modal
 ```
 
 # Basic Usage
-```react
+```jsx
 import React, { useState } from 'react';
 import { Modal } from 'mui-react-modal';
 import { Button } from '@mui/material';
