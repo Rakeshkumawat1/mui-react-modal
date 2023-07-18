@@ -1,6 +1,6 @@
 {
   "name": "mui-react-modal",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "private": false,
   "description": "Create responsive modal and dialog in react using mui.",
   "author": "Rakesh kumawat",
@@ -9,7 +9,17 @@
   "module": "dist/index.es.js",
   "keywords": [
     "React-modal",
-    "dialog",
+    "Modal",
+    "mui-modal",
+    "mui-dialog",
+    "Dialog",
+    "React",
+    "Responsive",
+    "Responsive-modal",
+    "Responsive-dialog",
+    "Customizable",
+    "Customizable-modal",
+    "Customizable-dialog",
     "custom-modal"
   ],
   "scripts": {
@@ -54,5 +64,10 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rakeshkumawat1/mui-react-modal.git"
+  },
+  "homepage": "https://github.com/Rakeshkumawat1/mui-react-modal.git"
 }
