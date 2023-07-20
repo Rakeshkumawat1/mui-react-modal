@@ -61,3 +61,10 @@ export default function Test() {
 | `descriptionRootClass`       | `String`     | `null`    |     `false`  | A CSS class name to modify the default style of the modal description. |
 | `actionRootClass`       | `String`     | `null`    |    `false`   | A CSS class name to modify the default style of the modal action element(s). |
 
+## Upcoming Features
+We're actively working on improving the library to better meet your needs.Here are some of the upcoming features you can look forward to:
+
+- [ Dialog Box] A new dialog box feature that allows you to display custom content in a styled dialog. You will be able to customize the title, content, actions, and appearance of the dialog box to suit your needs.
+
+## Contributing
+Contributions are welcome! If you have any ideas, suggestions, or bug fixes, feel free to open an issue or submit a pull request.
