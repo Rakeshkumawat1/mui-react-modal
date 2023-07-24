@@ -13,7 +13,14 @@ const TransitionHandler = React.forwardRef((props, ref) => {
 const FadeTransitionHandler = React.forwardRef((props, ref) => {
     return <Fade ref={ref} {...props} />;
 });
-function CustomDialog(props) {
+
+// Create action position mapper to avoid multiple if else in jsx.
+const actionPositionMapper = {
+    left: "flex-start",
+    center: 'center',
+    right: 'flex-end'
+}
+const CustomDialog = (props) => {
     const {
         open = false,
         transition = false,
@@ -35,6 +42,7 @@ function CustomDialog(props) {
             color: (theme) => theme.palette.grey[500]
         },
         fullScreen = false,
+        actionPosition = "left",
         ...other
     } = props || {};
 
@@ -62,7 +70,14 @@ function CustomDialog(props) {
             <DialogContent dividers={dividers} sx={dialogContentSx}>
                 {content}
             </DialogContent>
-            <DialogActions sx={dialogActionSx}>
+            <DialogActions sx={Object.keys(customStyle).length ? dialogActionSx :
+                {
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: actionPositionMapper[actionPosition],
+                    width: '100%'
+                }}
+            >
                 {actions}
             </DialogActions>
         </Dialog>
@@ -93,6 +108,7 @@ CustomDialog.propTypes = {
     dialogActionSx: PropTypes.object,
     closeIconSx: PropTypes.object,
     dialogRootSx: PropTypes.object,
+    actionPosition: PropTypes.oneOf(["left", "center", "right"]),
 }
 
 export default CustomDialog;

@@ -17,5 +17,7 @@ export const DialogTest = {
     close: () => false,
     action: <Button variant="outlined" size={"small"}>Save</Button>,
     closeIcon: true,
+    actionPosition : "right",
+    hideBackdrop: true
   }
 };
