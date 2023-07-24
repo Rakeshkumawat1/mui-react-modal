@@ -24,8 +24,7 @@ function CustomModal(props) {
   const style = {
     position: 'absolute',
     minWidth: 300,
-    bgcolor: 'background.paper',
-    // border: '2px solid #000',
+    bgcolor: 'background.default',
     boxShadow: 24,
     borderRadius: '10px',
     pt: 2,
