@@ -59,7 +59,8 @@ export default function Test() {
 | `closeIconRootClass`       | `String`     | `null`    |     `false`   | A CSS class name to modify the default style of the close icon. |
 | `titleRootClass`       | `String`     | `null`    |     `false`   | A CSS class name to modify the default style of the modal title. |
 | `descriptionRootClass`       | `String`     | `null`    |     `false`  | A CSS class name to modify the default style of the modal description. |
-| `actionRootClass`       | `String`     | `null`    |    `false`   | A CSS class name to modify the default style of the modal action element(s). |
+| `actionRootClass`   | `String` | `null`  |  `false`| A CSS class name to modify the default style of the modal action element(s). |
+| `closeOnBackgroundCheck`   | `Boolean` | `true`  |  `false`| Make it false if you don't want to close modal on outside check or background check. |
 
 ## Upcoming Features
 We're actively working on improving the library to better meet your needs.Here are some of the upcoming features you can look forward to:
