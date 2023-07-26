@@ -18,7 +18,8 @@ function CustomModal(props) {
     titleRootClass = "",
     descriptionRootClass = "",
     actionRootClass = "",
-    modalPosition = "center"
+    modalPosition = "center",
+    closeOnBackgroundCheck = true,
   } = props;
 
   const style = {
@@ -55,7 +56,7 @@ function CustomModal(props) {
   return (
     <Modal
       open={open}
-      onClose={close}
+      onClose={closeOnBackgroundCheck ? close : ""}
       aria-labelledby="parent-modal-title"
       aria-describedby="parent-modal-description"
     >
@@ -148,7 +149,8 @@ CustomModal.propTypes = {
   titleRootClass: PropTypes.string,
   descriptionRootClass: PropTypes.string,
   actionRootClass: PropTypes.string,
-  modalPosition: PropTypes.oneOf(["center", "topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight"])
+  modalPosition: PropTypes.oneOf(["center", "topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight"]),
+  closeOnBackgroundCheck: PropTypes.bool,
 }
 
 export default CustomModal;
