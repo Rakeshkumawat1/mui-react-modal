@@ -18,16 +18,13 @@ function CustomModal(props) {
     titleRootClass = "",
     descriptionRootClass = "",
     actionRootClass = "",
+    modalPosition = "center"
   } = props;
 
   const style = {
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
     minWidth: 300,
-    bgcolor: 'background.paper',
-    // border: '2px solid #000',
+    bgcolor: 'background.default',
     boxShadow: 24,
     borderRadius: '10px',
     pt: 2,
@@ -45,6 +42,16 @@ function CustomModal(props) {
     right: 'flex-end'
   }
 
+  const modalPositionMapper = {
+    center: { top: '50%', left: '50%', transform: 'translate(-50%, -50%)', },
+    topLeft: { top: '10px', left: '10px', },
+    topCenter: { top: '10px', left: '50%', transform: 'translate(-50%, 0%)', },
+    topRight: { top: '10px', right: '10px', },
+    bottomLeft: { bottom: '10px', left: '10px', },
+    bottomCenter: { bottom: '10px', left: '50%', transform: 'translate(-50%, 0%)', },
+    bottomRight: { bottom: '10px', right: '10px', },
+  }
+
   return (
     <Modal
       open={open}
@@ -54,7 +61,7 @@ function CustomModal(props) {
     >
       <Box
         className={modalRootClass}
-        sx={Object.keys(customStyle).length ? customStyle : style}
+        sx={Object.keys(customStyle).length ? customStyle : { ...style, ...modalPositionMapper[modalPosition] }}
       >
         {closeIcon && <IconButton
           id="modal-close-icon"
@@ -141,6 +148,7 @@ CustomModal.propTypes = {
   titleRootClass: PropTypes.string,
   descriptionRootClass: PropTypes.string,
   actionRootClass: PropTypes.string,
+  modalPosition: PropTypes.oneOf(["center", "topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight"])
 }
 
 export default CustomModal;
