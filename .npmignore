@@ -1,1 +1,9 @@
 .storybook
+./src
+.babelrc.json
+.gitignore
+.nvmrc
+babel.config.js
+LICENSE
+package-lock.json
+rollup.config.mjs
