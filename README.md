@@ -13,7 +13,7 @@ npm i mui-react-modal
 yarn add mui-react-modal
 ```
 
-# Basic Usage
+# Basic Usage for modal
 ```jsx
 import React, { useState } from 'react';
 import { Modal } from 'mui-react-modal';
@@ -43,7 +43,7 @@ export default function Test() {
 
 ```
 
-# API & Supported parameters
+# API & Supported parameters for modal
 
 | Property     | Type           | Default       | Required     | Description                             |
 | :---         | :---           | :---          | :---         | :---                                    |
@@ -62,10 +62,57 @@ export default function Test() {
 | `actionRootClass`   | `String` | `null`  |  `false`| A CSS class name to modify the default style of the modal action element(s). |
 | `closeOnBackgroundCheck`   | `Boolean` | `true`  |  `false`| Make it false if you don't want to close modal on outside check or background check. |
 
+# Basic Usage for dialog
+```jsx
+import React, { useState } from 'react';
+import { Dialog } from 'mui-react-modal';
+import { Button } from '@mui/material';
+
+export default function Test() {
+    const [open, setOpen] = useState(false);
+
+    const handleDialog = () => setOpen(!open);
+
+    const dialogAction = <Button variant='outlined' size='small'>Save</Button>
+    
+    return (
+        <>
+            <Button onClick={handleDialog}>Open Dialog Box</Button>
+            <Dialog
+                open={open}
+                title={"Dialog Box Heading"}
+                description={"Dialog Box Description."}
+                close={handleDialog}
+                action={dialogAction}
+                actionPosition="right"
+            />
+        </>
+    )
+}
+
+
+```
+# API & Supported parameters for dialog
+
+| Property     | Type           | Default       | Required     | Description                             |
+| :---         | :---           | :---          | :---         | :---                                    |
+| `open`       | `Boolean`     | `false`    |       `true`   | Controls whether the dialog is open or closed.  |
+| `close`       | `Function`     | `null`   |     `false`  | A function to close the dialog.   |
+| `title`       | `String \|\| Element`     | `null`    |    `false`    |  Show dialog title.     |
+| `description` | `String \|\| Element`     | `null`    |     `false`   |  Show dialog description.  |
+| `action`       | `Element`     | `null`    |     `false`   |   The element to be used as the dialog's action button(s).      |
+| `dividers`       | `Boolean`     | `false`    |     `false`   |    Controls whether to show dividers between sections in the dialog.  |
+| `closeIcon`       | `Boolean`     | `true`    |    `false`   |  Controls whether to show a close icon in the dialog header.  |
+| `hideBackdrop`  | `String` | `false` | `false` | Controls whether to hide the backdrop when the dialog is open.|
+| `dialogTitleSx`       | `Object`     | `{}`  | `false`  | Style object for the dialog title.|
+| `dialogContentSx`       | `Object`     | `{}`    |     `false`   | Style object for the dialog content. |
+| `dialogActionSx`       | `Object`     | `{}`    |     `false`   | Style object for the dialog actions.|
+| `dialogRootSx`       | `Object`     | `{}`    |     `false`  | Style object for the dialog root element.|
+| `closeIconSx`       | `Object`     | `{...}`    |    `false`   | Style object for the close icon. |
+| `fullScreen`    |    `Boolean` |   `false`  |  `false`   |  Controls whether the dialog should be displayed in full-screen mode.   |
+
+
 ## Upcoming Features
-We're actively working on improving the library to better meet your needs.Here are some of the upcoming features you can look forward to:
-
-- [ Dialog Box] A new dialog box feature that allows you to display custom content in a styled dialog. You will be able to customize the title, content, actions, and appearance of the dialog box to suit your needs.
-
+We are dedicated to continuously enhancing the library to provide an even better user experience.
 ## Contributing
 Contributions are welcome! If you have any ideas, suggestions, or bug fixes, feel free to open an issue or submit a pull request.
